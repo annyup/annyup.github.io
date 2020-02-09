@@ -8,36 +8,99 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* GLOBAL STYLES */
+html {
+  font-size: 10px;
+}
+
 body {
-    background-image: linear-gradient(270deg, #eeaeca, #94bbe9);
+  background-image: linear-gradient(270deg, #eeaeca, #94bbe9);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Wrapper styles */
+
+.wrapper {
+  max-width: 1920px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px blue solid;
+}
+
+/* Header styles */
+
+/* h1 {
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 5.0rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 15.0rem;
+} */
+
+header {
     padding-top: 5em;
     display: flex;
     justify-content: center;
-  }
-  
-/* DEMO-SPECIFIC STYLES */
+}
+
 .typewriter h1 {
-color: #fff;
-font-family: 'Times New Roman', Times, serif;
-overflow: hidden; /* Ensures the content is not revealed until the animation */
-border-right: .15em solid #F5F5F5; /* The typwriter cursor */
-white-space: nowrap; /* Keeps the content on a single line */
-margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-letter-spacing: .15em; /* Adjust as needed */
-animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #FFF; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-from { width: 0 }
-to { width: 100% }
+  from { width: 0 }
+  to { width: 100% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-from, to { border-color: transparent }
-50% { border-color: #F5F5F5 }
+  from, to { border-color: transparent }
+  50% { border-color: #FFF; }
+}
+
+/* Navigation styles */
+
+nav {
+  font-size: 2.0rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  color: #FFF;
+}
+
+.nav-Styles {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-Styles li {
+  padding-right: 20px;
+}
+
+/* .nav-Styles li a {
+  padding: 20px 10px 20px 10px;
+} */
+
+.nav-Styles a:hover {
+  border-bottom: 3px solid #F3CCBD;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
