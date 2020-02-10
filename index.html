@@ -5,33 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/7b2a7aecf5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <title>Anny U Pham</title>
 </head>
 <body>
 <!-- Start of nav -->
 <nav>
     <div class="wrapper">
-        <ul class="nav-Styles">
-            <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">portfolio</a></li>
-            <li><a href="#">contact</a></li>
+        <label for="toggle"><i class="fas fa-ellipsis-h"></i></label>
+        <input type="checkbox" id="toggle" name="toggle" />
+        <ul class="nav-Styles nav-Sliding">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
         </ul>
     </div>
 </nav>
 <!-- End of nav -->
 
 <!-- Start of header -->
-<header>
-    <div class="typewriter">
-        <h1>hello, my name is anny pham.</h1>
-    </div>
-    <div class="arrow bounce">
-        <i class="fas fa-angle-double-down"></i>
+<header id="home">
+    <div class="intro">
+        <div class="typewriter">
+            <h1>hello, my name is anny.</h1>
+        </div>
+        <div class="arrow-Button">
+            <div class="arrow bounce">
+                <a href="#about"><i class="fas fa-angle-double-down"></i></a>
+            </div>
+        </div>
     </div>
 </header>
 <!-- End of header -->
 
+<!-- Start of main -->
+<main>
+    <!-- Start of section one -->
+    <section>
+        <div class="wrapper" id="about">
+            <div class="about">
+                <h2>about her</h2>
+                <div class="about-Info">
+                    <div class="about-Text">
+                        <p>Hi, I'm Anny Pham! I'm an aspiring Web developer and Graphic designer currently based in Windsor, Ontario. I graduated from the University of Windsor with a degree in Business and a concentration in Marketing.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi ab vitae quis officia provident quisquam et eos hic aperiam blanditiis?</p>
+                        <div class="view-Nav">
+                            <a href="#" target="_blank" class="view-Button">Resume</a>
+                            <a href="#skills" class="view-Button">Skills</a>
+                        </div>
+                    </div>                
+                    <div class="about-Img">
+                        <div class="about-ImgContainer">
+                            <img src="https://via.placeholder.com/350x400" alt="Placeholder">
+                        </div>
+                        <ul class="social-Info">
+                            <li><a href="https://github.com/annyup" target="_blank"><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://linkedin.com/in/annyupham" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of section -->
+
+    <!-- Start of section two -->
+    <section>
+        <div class="wrapper" id="skills">
+            <div class="skills">
+                <h2>skills</h2>
+                <ul class="skills-List">
+                    <li><i class="fab fa-html5"></i></li>
+                    <li><i class="fab fa-css3-alt"></i></li>
+                    <li><i class="fab fa-sass"></i></li>
+                    <li><i class="devicon-jquery-plain"></i></li>
+                    <li><i class="devicon-photoshop-plain"></i></li>
+                    <li><i class="devicon-visualstudio-plain"></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- End of section two -->
+
+    <!-- Start of section three -->
+    <section>
+        <div class="wrapper" id="portfolio">
+            <div class="portfolio">
+                <h2>portfolio</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis voluptas officiis accusantium tenetur, magnam repudiandae labore odio similique exercitationem cupiditate voluptates, in, fugit fugiat. Deleniti incidunt, eaque hic distinctio ea quae veniam deserunt cupiditate illum nemo, sint eveniet explicabo error!</p>
+            </div>
+        </div>
+    </section>
+    <!-- End of section three -->
+
+    <!-- Start of section four -->
+    <section>
+        <div class="wrapper" id="contact">
+            <div class="contact-Me">
+                <h2>Let's Connect!</h2>
+                    <form action="#" method="#" id="form" name="form">
+                        <div class="form">
+                            <fieldset>
+                                <input type="text" id="yourName" placeholder="Name*">
+                            </fieldset>
+                            <fieldset>
+                                <input type="text" id="yourEmail" placeholder="Email*">
+                            </fieldset>
+                            <fieldset>
+                                <input type="text" id="yourNumber" placeholder="Phone Number">
+                            </fieldset>
+                            <textarea name="userFeedback" id="yourMessage" placeholder="Message*"></textarea>
+                        </div>
+                        <div class="form-Button">
+                            <button class="button-Block">Send Message</button>
+                        </div>
+                        <a href="#home" class="back-Top">Back to Top</a>
+                    </form>
+            </div>
+        </div>
+    </section>
+    <!-- End of section four -->
+</main>
+<!-- End of main -->
+
+<!-- Start of footer -->
+<footer>
+    <p>Copyright Anny Pham 2020</p>
+</footer>
+<!-- End of footer -->
 
 </body>
 </html>
