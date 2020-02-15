@@ -12,14 +12,16 @@
 <!-- Start of nav -->
 <nav>
     <div class="wrapper">
-        <label for="toggle"><i class="fas fa-ellipsis-h"></i></label>
-        <input type="checkbox" id="toggle" name="toggle" />
-        <ul class="nav-Styles nav-Sliding">
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#portfolio">portfolio</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
+        <div id="nav-Toggle">
+            <input type="checkbox" id="toggle" />
+                <span><i class="fas fa-ellipsis-h"></i></span>
+            <ul id="nav-Styles">
+                <li><a href="#home" class="nav-Select">home</a></li>
+                <li><a href="#about" class="nav-Select">about</a></li>
+                <li><a href="#portfolio" class="nav-Select">portfolio</a></li>
+                <li><a href="#contact" class="nav-Select">contact</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 <!-- End of nav -->
@@ -42,8 +44,8 @@
 <!-- Start of main -->
 <main>
     <!-- Start of section one -->
-    <section>
-        <div class="wrapper" id="about">
+    <section id="about">
+        <div class="wrapper">
             <div class="about">
                 <h2>about her</h2>
                 <div class="about-Info">
@@ -56,9 +58,7 @@
                         </div>
                     </div>                
                     <div class="about-Img">
-                        <div class="about-ImgContainer">
                             <img src="https://via.placeholder.com/350x400" alt="Placeholder">
-                        </div>
                         <ul class="social-Info">
                             <li><a href="https://github.com/annyup" target="_blank"><i class="fab fa-github"></i></a></li>
                             <li><a href="https://linkedin.com/in/annyupham" target="_blank"><i class="fab fa-linkedin"></i></a></li>
@@ -71,8 +71,8 @@
     <!-- End of section -->
 
     <!-- Start of section two -->
-    <section>
-        <div class="wrapper" id="skills">
+    <section id="skills">
+        <div class="wrapper">
             <div class="skills">
                 <h2>skills</h2>
                 <ul class="skills-List">
@@ -90,10 +90,13 @@
     <!-- End of section two -->
 
     <!-- Start of section three -->
-    <section>
-        <div class="wrapper" id="portfolio">
+    <section id="portfolio">
+        <div class="wrapper">
             <div class="portfolio">
                 <h2>portfolio</h2>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis voluptas officiis accusantium tenetur, magnam repudiandae labore odio similique exercitationem cupiditate voluptates, in, fugit fugiat. Deleniti incidunt, eaque hic distinctio ea quae veniam deserunt cupiditate illum nemo, sint eveniet explicabo error!</p>
+                <h3>Design</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis voluptas officiis accusantium tenetur, magnam repudiandae labore odio similique exercitationem cupiditate voluptates, in, fugit fugiat. Deleniti incidunt, eaque hic distinctio ea quae veniam deserunt cupiditate illum nemo, sint eveniet explicabo error!</p>
             </div>
         </div>
@@ -101,8 +104,8 @@
     <!-- End of section three -->
 
     <!-- Start of section four -->
-    <section>
-        <div class="wrapper" id="contact">
+    <section id="contact">
+        <div class="wrapper">
             <div class="contact-Me">
                 <h2>Let's Connect!</h2>
                     <form action="#" method="#" id="form" name="form">
@@ -136,5 +139,8 @@
 </footer>
 <!-- End of footer -->
 
+<!-- Start of scripts -->
+<script src="main.js"></script>
+<!-- End of scripts -->
 </body>
 </html>
