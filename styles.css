@@ -17,12 +17,14 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
   background-image: linear-gradient(270deg, #eeaeca, #94bbe9);
   font-family: 'Times New Roman', Times, serif;
 }
+
 
 a {
   font-size: 2.0rem;
@@ -33,6 +35,10 @@ a {
 p {
   color: #FFF;
   font-size: 2rem;
+}
+
+li {
+    list-style: none;
 }
 
 i {
@@ -65,7 +71,7 @@ header {
 h1 {
   color: #FFF;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 6.5em;
+  font-size: 6.5rem;
 }
 
 .typewriter {
@@ -74,11 +80,11 @@ h1 {
 }
 
 .typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .50rem solid #FFF; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15rem; /* Adjust as needed */
+  overflow: hidden;
+  border-right: .50rem solid #FFF;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15rem;
   animation: typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
@@ -135,95 +141,112 @@ h2 {
   padding-bottom: 10px;
 }
 
+h3 {
+  color: #4A455C;
+  font-size: 2rem;
+}
 
 /* Navigation styles */
 
-nav {
-  font-size: 2.0rem;
+#nav-Toggle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-a {
-  text-decoration: none;
+#nav-Toggle input {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
 }
 
-li {
-  list-style: none;
+#nav-Toggle span i {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  display: inline-block;
+
+  background-color: #4A455C;
+  border-radius: 50%;
+  padding: 13px;
+  
 }
 
-li a {
+#nav-Toggle span i:hover {
   color: #FFF;
 }
 
-.nav-Styles {
+/* #nav-Toggle input:checked ~ span {
+  background-color: #4A455C;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  z-index: 5;
+} */
+
+
+#nav-Styles {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding-top: 10px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  
+  background: #FFF;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transition: all 0.5s ease-in;
+
 }
 
-.nav-Styles li {
-  padding-right: 20px;
+#nav-Styles li {
+  padding: 10px 0;
+  font-size: 22px;
 }
 
-.nav-Styles li a {
+#nav-Styles a {
+  display: block;
+  color: #4A455C;
   transition: all .3s ease-in;
-}
-
-.nav-Styles a:hover {
-  border-bottom: 3px solid #F3CCBD;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-.nav-Sliding {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(255,255,255);
-  position: fixed;
-  z-index: 1;
-  right: -100%;
-  top: 0px;
-  width: 100%;
-  height: 100vh;
-  transition: all 0.5s ease-in;
+#nav-Styles a:hover {
+  border-bottom: 3px solid #F3CCBD; 
 }
 
-.nav-Sliding li a {
-  color: #4A455C;
-  display: inline-block;
-  font-size: 4.0rem;
-  width: 100%;
-  margin: 10px 0;
-}
-input[type="checkbox"]:checked + .nav-Sliding {
+#nav-Toggle input:checked ~ ul {
+  transform: none;
   right: 0;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-label[for="toggle"] {
-  color: #FFF;
-  background-color: #4A455C;
-  padding: 15px 15px 13px 15px;
-  border-radius: 50%;
-  position: fixed;
-  top: 50px;
-  right: 50px;
-  z-index: 2;
-}
-
-label[for="toggle"]:hover {
-  background-image: linear-gradient(270deg, #eeaeca, #94bbe9);
-  color: #FFF;
-  transition: all 0.5s ease-in;
-}
-
-
 /* Section one styles */
+
+#about {
+  background-color: #FFF;
+}
 
 .about {
   height: 100vh;
@@ -234,11 +257,16 @@ label[for="toggle"]:hover {
   /* border: 1px solid black; */
 }
 
+.about h2 {
+  color: #4A455C;
+}
+
 .about-Info {
   display: flex;
 }
 
 .about-Info p {
+  color: #4A455C;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -258,25 +286,29 @@ label[for="toggle"]:hover {
 .about-Img {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.about-ImgContainer {
-  box-shadow: 10px 10px 0px #F3CCBD;
+.about-Img img {
+  box-shadow: 15px 15px 0px #F3CCBD;
 }
 
 .social-Info {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-left: 10px;
 }
 
 .social-Info i {
+  color: #4A455C;
   margin-left: 10px;
   padding-top: 15px;
   padding-right: 20px;
+}
+
+.social-Info i:hover {
+  color: #F3CCBD;
 }
 
 .view-Nav {
@@ -291,14 +323,15 @@ label[for="toggle"]:hover {
   top: 100%;
   left: 10%;
   font-family: 'Times New Roman', Times, serif;
-  color: #4A455C;
-  background-color: #FFF;
+  color: #FFF;
+  background-color: #4A455C;
   padding: 10px 15px;
   border: none;
   transition: all .2s ease-in;
 }
 
 .view-Button:hover {
+  color: #4A455C;
   background-color: #F3CCBD;
 }
 
@@ -326,12 +359,25 @@ label[for="toggle"]:hover {
 
 /* Section three styles */
 
+#portfolio {
+  background-color: #FFF;
+}
+
 .portfolio {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.portfolio h3 {
+  padding: 10px 0;
+}
+
+.portfolio p, 
+.portfolio h2 {
+  color: #4A455C;
 }
 
 /* Section four styles */
