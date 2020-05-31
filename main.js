@@ -5,7 +5,9 @@ const typed = new Typed('#typed', {
   typeSpeed: 100,
   backSpeed: 80,
   smartBackspace: true,
-  loop: true
+  loop: true,
+  backDelay: 2000,
+  startDelay: 200
 });
 
 // Hamburger menu effect
