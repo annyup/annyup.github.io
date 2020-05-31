@@ -58,7 +58,7 @@ i:hover {
   width: 70%;
   margin: 0 auto;
 
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 /* Header styles */
@@ -352,11 +352,11 @@ h3 {
 /* Section two styles */
 
 .skills {
-  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10% 0;
 }
 
 .skills-List {
@@ -522,5 +522,13 @@ footer p {
   .view-Button {
     top: 30px;
     left: 0;
+  }
+
+  .about {
+    height: 120vh;
+  }
+
+  .skills {
+    margin: 20% 0;
   }
 }
