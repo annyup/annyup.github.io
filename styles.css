@@ -527,6 +527,7 @@ footer p {
   }
 
   .about {
+    height: auto;
     margin: 20% 0;
   }
 
