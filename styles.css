@@ -55,8 +55,10 @@ i:hover {
 
 .wrapper {
   max-width: 1920px;
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
+
+  border: 1px red solid;
 }
 
 /* Header styles */
@@ -64,7 +66,6 @@ i:hover {
 header {
     padding-top: 30rem;
     display: flex;
-    justify-content: center;
     height: 100vh;
 }
 
@@ -74,12 +75,25 @@ h1 {
   font-size: 6.5rem;
 }
 
+.intro {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .typewriter {
   border: 1px solid white;
   padding: 100px;
+
 }
 
 .typewriter h1 {
+
+  display: flex;
+  flex-wrap: wrap;
+
   overflow: hidden;
   border-right: .50rem solid #FFF;
   white-space: nowrap;
@@ -105,7 +119,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 30%;
+  padding-top: 20%;
 }
 
 .arrow {
@@ -138,7 +152,6 @@ h1 {
 h2 {
   color: #FFF;
   font-size: 3rem;
-  padding-bottom: 10px;
 }
 
 h3 {
@@ -263,6 +276,7 @@ h3 {
 
 .about-Info {
   display: flex;
+  padding-top: 30px;
 }
 
 .about-Info p {
@@ -320,14 +334,14 @@ h3 {
 
 .view-Button {
   position: relative;
-  top: 100%;
-  left: 10%;
+  top: 50%;
   font-family: 'Times New Roman', Times, serif;
   color: #FFF;
   background-color: #4A455C;
   padding: 10px 15px;
   border: none;
   transition: all .2s ease-in;
+  margin: 10px;
 }
 
 .view-Button:hover {
@@ -347,6 +361,7 @@ h3 {
 
 .skills-List {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
@@ -355,6 +370,8 @@ h3 {
 
 .skills-List i {
   font-size: 5rem;
+  padding: 20px;
+  display: flex;
 }
 
 /* Section three styles */
@@ -475,4 +492,35 @@ footer {
 footer p {
   color: #4A455C;
   font-size: 2rem;
+}
+
+
+@media (max-width: 900px ) {
+  .about-Info {
+    flex-direction: column-reverse;
+    align-items: center;
+
+  }
+
+  .about-Text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .about-Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .view-Nav {
+    width: auto;
+  }
+
+  .view-Button {
+    top: 30px;
+    left: 0;
+  }
 }
