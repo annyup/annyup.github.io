@@ -55,10 +55,8 @@ i:hover {
 
 .wrapper {
   max-width: 1920px;
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
-
-  border: 1px red solid;
 }
 
 /* Header styles */
@@ -86,12 +84,18 @@ h1 {
 }
 
 .typewriter {
-  border: 1px solid white;
-  padding: 100px;
-
+  border: 2px solid white;
+  padding: 5% 10px;
+  width: 75%;
 }
 
 .typewriter h1 {
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+}
+
+/* .typewriter h1 {
 
   display: flex;
   flex-wrap: wrap;
@@ -103,7 +107,7 @@ h1 {
   letter-spacing: .15rem;
   animation: typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
-}
+} */
 
 /* The typing effect */
 @keyframes typing {
@@ -165,7 +169,7 @@ h3 {
 
 /* Navigation styles */
 
-.nav-Toggle {
+#nav-Toggle {
   display: block;
   position: fixed;
   top: 50px;
@@ -177,7 +181,7 @@ h3 {
   user-select: none;
 }
 
-.nav-Toggle input {
+#nav-Toggle input {
   display: block;
   width: 50px;
   height: 50px;
@@ -191,7 +195,7 @@ h3 {
   -webkit-touch-callout: none;
 }
 
-.nav-Toggle span i {
+#nav-Toggle span i {
   position: relative;
   top: 0px;
   left: 0px;
@@ -204,7 +208,7 @@ h3 {
   
 }
 
-.nav-Toggle span i:hover {
+#nav-Toggle span i:hover {
   color: #FFF;
 }
 
@@ -217,7 +221,7 @@ h3 {
 } */
 
 
-.nav-Styles {
+#nav-Styles {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,12 +241,12 @@ h3 {
 
 }
 
-.nav-Styles li {
+#nav-Styles li {
   padding: 10px 0;
   font-size: 22px;
 }
 
-.nav-Styles a {
+#nav-Styles a {
   display: block;
   color: #4A455C;
   transition: all .3s ease-in;
@@ -250,11 +254,11 @@ h3 {
   padding-bottom: 5px;
 }
 
-.nav-Styles a:hover {
+#nav-Styles a:hover {
   border-bottom: 3px solid #F3CCBD; 
 }
 
-.nav-Toggle input:checked ~ ul {
+#nav-Toggle input:checked ~ ul {
   transform: none;
   right: 0;
 }
@@ -271,7 +275,9 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #FFF;
   /* border: 1px solid black; */
+  padding: 20% 0;
 }
 
 .about h2 {
@@ -528,7 +534,6 @@ footer p {
 
   .about {
     height: auto;
-    margin: 20% 0;
   }
 
   .skills {
@@ -542,8 +547,12 @@ footer p {
 
 @media (max-width: 480px) {
 
-  .nav-Toggle {
+  #nav-Toggle {
     top: 10px;
     right: 10px;
+  }
+
+  form {
+    width: 85%;
   }
 }
