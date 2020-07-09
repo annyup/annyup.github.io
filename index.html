@@ -3,48 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Zilla+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7b2a7aecf5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Anny U Pham</title>
 </head>
 <body>
-
-<!-- Start of nav -->
-<nav>
-    <div id="nav-Toggle">
-        <input type="checkbox" id="toggle" />
-            <span><i class="fas fa-ellipsis-h"></i></span>
-        <ul id="nav-Styles">
-            <li><a href="#home" class="nav-Select">home</a></li>
-            <li><a href="#about" class="nav-Select">profile</a></li>
-            <li><a href="#portfolio" class="nav-Select">portfolio</a></li>
-            <li><a href="#contact" class="nav-Select">contact</a></li>
-        </ul>
-    </div>
-</nav>
-<!-- End of nav -->
-
 <!-- Start of header -->
 <header id="home">
+    <div class="wrapper nav-container">
+        <p class="logo">AUP</p>
+        <!-- Start of nav -->
+        <nav>
+            <div class="nav-toggle">
+                <input type="checkbox" id="toggle" />
+                    <span aria-label="navigation bar"><i class="fas fa-bars"></i></span>
+                        <ul id="nav-styles" class="nav-styles">
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+        </nav>
+        <!-- End of nav -->
+    </div>
       
     <div class="wrapper">
         <div class="intro">
-            <!-- <div class="typewriter">
-                <h1>hello, my name is anny.</h1>
-            </div> -->
             <div class="typewriter">
                 <h1>
                     <div id="typed-strings">
-                        <span>hello, my name is anny.</span>
+                        <span>Hello, my name is anny.</span>
                     </div>
                     <span id="typed"></span>
                 </h1>
+                <p>Front-end developer currently based in Windsor</p>
             </div>
-            <div class="arrow-Button">
-                <div class="arrow bounce">
-                    <a href="#about"><i class="fas fa-angle-double-down"></i></a>
-                </div>
+            <img src="./assets/flower2.png" alt="Drawing of a wild flower">
+
+            <div class="mouse-arrow">
+                <a class="mouse-box" href="#about">
+                    <span aria-label="scroll down"></span>
+                </a>
             </div>
         </div>
     </div>
@@ -53,108 +64,154 @@
 
 <!-- Start of main -->
 <main>
-    <!-- Start of section one -->
+    <!-- Start of about -->
+    <div class="svg-wave">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M-2.55,69.57 C151.52,204.77 336.06,-106.10 534.13,45.88 L500.00,150.00 L0.00,150.00 Z">
+            </path>
+        </svg>
+    </div>
     <section id="about">
         <div class="wrapper">
-            <div class="about">
-                <h2>profile</h2>
-                <div class="about-Info">
-                    <div class="about-Text">
-                        <p>Hi, I'm Anny. I'm an aspiring web developer and graphic designer currently based in Windsor, Ontario. I graduated from the University of Windsor with a degree in Business and a concentration in Marketing.</p>
-                        <p>I've been coding and designing since the age of 9, and now I'm turning it into my full time passion. As of right now, I'm attending Juno College for web development.</p>
-
-                       
-
-                        <div class="view-Nav">
-                            <a href="#" target="_blank" class="view-Button">Resume</a>
-                            <a href="#skills" class="view-Button">Skills</a>
-                        </div>
-                    </div>                
-                    <div class="about-Img">
-                            <img src="https://via.placeholder.com/350x400" alt="Placeholder">
-                        <ul class="social-Info">
-                            <li><a href="https://github.com/annyup" target="_blank"><i class="fab fa-github"></i></a></li>
-                            <li><a href="https://linkedin.com/in/annyupham" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="about" data-aos="fade-up">
+                <h2>Turning my passion to full time</h2>
+                    <a href="about.html">Learn behind the code</a>
             </div>
         </div>
-    </section>
-    <!-- End of section -->
 
-    <!-- Start of section two -->
+    </section>
+    <div class="svg-wave">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M-30.19,183.05 C171.83,-117.93 353.55,300.48 522.85,79.43 L502.54,-4.45 L-8.19,-14.32 Z"></path>
+        </svg>
+    </div>
+    <!-- End of about -->
+
+    <!-- Start of portfolio -->
+    <section id="portfolio">
+        <div class="wrapper">
+            <div class="portfolio-container">
+                <h2 data-aos="fade-up">Portfolio</h2>
+                    <div class="portfolio-grid">
+                      <!-- Projects load here -->
+                    </div>
+                  </div>
+            </div>        
+        </div>
+    </section>
+    <!-- End of portfolio -->
+
+    <!-- Start of skills -->
+    <div class="svg-wave">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M-2.55,69.57 C151.52,204.77 336.06,-106.10 534.13,45.88 L500.00,150.00 L0.00,150.00 Z">
+            </path>
+        </svg>
+    </div>
     <section id="skills">
         <div class="wrapper">
-            <div class="skills">
-                <h2>skills</h2>
-                <ul class="skills-List">
-                    <li><i class="fab fa-html5"></i></li>
-                    <li><i class="fab fa-css3-alt"></i></li>
-                    <li><i class="fab fa-sass"></i></li>
-                    <li><i class="devicon-jquery-plain"></i></li>
-                    <li><i class="devicon-photoshop-plain"></i></li>
-                    <li><i class="devicon-visualstudio-plain"></i></li>
-                </ul>
+            <div class="skills" data-aos="fade-up">
+                <h2>Skills + Toolkit</h2>
+                    <ul class="skills-list">
+                        <li>
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-sass"></i>
+                            <span>
+                                Sass
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </li>
+                        <li>
+                            <i class="devicon-jquery-plain"></i>
+                            <span>jQuery</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-github"></i>
+                            <span>Github</span>
+                        </li>
+                        <li>
+                            <i class="devicon-photoshop-plain"></i>
+                            <span>Photoshop</span>
+                        </li>
+                        <li>
+                            <i class="devicon-visualstudio-plain"></i>
+                            <span>VS Code</span>
+                        </li>
+                    </ul>
             </div>
         </div>
     </section>
+    <div class="svg-wave">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M-30.19,183.05 C171.83,-117.93 353.55,300.48 522.85,79.43 L502.54,-4.45 L-8.19,-14.32 Z"></path>
+        </svg>
+    </div>
+    <!-- End of skills -->
 
-    <!-- End of section two -->
-
-    <!-- Start of section three -->
-    <!-- <section id="portfolio">
-        <div class="wrapper">
-            <div class="portfolio">
-                <h2>portfolio</h2>
-                <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis voluptas officiis accusantium tenetur, magnam repudiandae labore odio similique exercitationem cupiditate voluptates, in, fugit fugiat. Deleniti incidunt, eaque hic distinctio ea quae veniam deserunt cupiditate illum nemo, sint eveniet explicabo error!</p>
-                <h3>Design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis voluptas officiis accusantium tenetur, magnam repudiandae labore odio similique exercitationem cupiditate voluptates, in, fugit fugiat. Deleniti incidunt, eaque hic distinctio ea quae veniam deserunt cupiditate illum nemo, sint eveniet explicabo error!</p>
-            </div>
-        </div>
-    </section> -->
-    <!-- End of section three -->
-
-    <!-- Start of section four -->
+    <!-- Start of contact -->
     <section id="contact">
         <div class="wrapper">
-            <div class="contact-Me">
+            <div class="contact" data-aos="fade-up">
                 <h2>Let's Connect!</h2>
-                    <form action="#" method="#" id="form" name="form">
+                    <p>annyupham@gmail.com</p>
+                    <ul class="social-info">
+                        <li><a href="https://linkedin.com/in/annyupham" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/annyup" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <form action="http://www.focuspocus.io/magic/annyupham@gmail.com" method="POST" id="form" name="form">
                         <div class="form">
                             <fieldset>
-                                <input type="text" id="yourName" placeholder="Name*">
+                                <label class="visuallyHidden" for="name">Name</label>
+                                <input type="text" id="yourName" name="name" placeholder="Name*">
                             </fieldset>
                             <fieldset>
-                                <input type="text" id="yourEmail" placeholder="Email*">
+                                <label class="visuallyHidden" for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Email*">
                             </fieldset>
                             <fieldset>
-                                <input type="text" id="yourNumber" placeholder="Phone Number">
+                                <label class="visuallyHidden" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
                             </fieldset>
-                            <textarea name="userFeedback" id="yourMessage" placeholder="Message*"></textarea>
+                            <label class="visuallyHidden" for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Message*"></textarea>
                         </div>
-                        <div class="form-Button">
-                            <button class="button-Block">Send Message</button>
+                        <div class="form-button">
+                            <button type="submit" class="button-block">Send Message</button>
                         </div>
-                        <a href="#home" class="back-Top">Back to Top</a>
+                        <a href="#home" class="back-top">Back to Top</a>
                     </form>
             </div>
         </div>
     </section>
-    <!-- End of section four -->
+    <!-- End of contact -->
 </main>
 <!-- End of main -->
 
 <!-- Start of footer -->
 <footer>
-    <p>Copyright Anny Pham 2020</p>
+    <p>Copyright © Anny Pham 2020</p>
 </footer>
 <!-- End of footer -->
 
 <!-- Start of scripts -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script src="scripts.js"></script>
 <!-- End of scripts -->
 </body>
 </html>

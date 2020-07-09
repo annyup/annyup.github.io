@@ -1,0 +1,35 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.nav-styles {
+    display: flex;
+    text-transform: lowercase;
+
+    li {
+        margin-right: 80px;
+    }
+
+    a {
+        color: #000;
+
+        &:hover {
+            color: #c6887b;
+            transition: 0.5s ease-in-out;
+        }
+    }
+}
+
+.nav-toggle {
+    span {
+        display: none;
+    }
+
+    #toggle {
+        display: none;
+    }
+}

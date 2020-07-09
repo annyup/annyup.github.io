@@ -1,0 +1,159 @@
+@media (max-width: 1260px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+    }
+
+    .about-me p {
+        width: 100%;
+    }
+
+    .about-img {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .nav-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+
+        input {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+        }
+
+        span {
+            display: block;
+        }
+
+        #toggle {
+            display: block;
+        }
+    }
+    
+    .nav-toggle span i {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        display: inline-block;
+        font-size: 3.0rem;
+    }
+
+    .nav-toggle input:checked ~ ul {
+        transform: none;
+        right: 0;
+    }
+  
+    .nav-styles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+
+        background: #f4f0ed;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transition: all 0.3s ease-in;
+
+        li {
+            padding: 10px 0;
+            font-size: 22px;
+            margin: 0;
+        }
+
+        a {
+            display: block;
+            color: #000;
+            transition: all .3s ease-in;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            
+            &:hover {
+            border-bottom: 3px solid #b7c4b2; 
+            }
+        }
+    }
+}
+
+@media (max-width: 900px ) {
+    .intro img {
+        right: 50px;
+    }
+
+    .about {
+        height: auto;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    form {
+        width: 80%;
+    }
+    
+}
+
+@media (max-width: 760px) {
+    .about-img img {
+        width: 400px;
+    }
+}
+
+@media(max-width: 550px) {
+    .about-img img {
+        width: 300px;
+    }
+
+    .portfolio-grid p,
+    .portfolio-grid a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .about-img img {
+        width: 250px;
+    }
+
+    form {
+        width: 85%;
+    }
+}
+
+@media (max-width: 380px) {
+    .skills-list i {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
