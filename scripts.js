@@ -79,6 +79,7 @@ portfolio.displayImage = function (portfolioArray) {
       // overlay on top of image displaying info & download
       const overlay = $(`<div>`)
           .addClass("overlay")
+          .attr("id", "overlay")
           .append(description, language, urlButton);
       
       const portfolioImg = $(`<div>`)
@@ -108,14 +109,15 @@ portfolio.hamburgerMenu = function() {
 
 portfolio.overlayHover = function() {
 
-    const overlay = document.getElementsByClassName('overlay');
+    const overlay = document.getElementById('overlay');
 
-    overlay.addEventListener('touchstart', handleOverlay);
+    overlay.addEventListener('click', handleOverlay);
 
-    $('.overlay.active').removeClass('active');
+    // $('.overlay.active').removeClass('active');
 
-    function handleOverlay() {
-        $(this).parent().addClass('active');
+    function handleOverlay(event) {
+        event.preventDefault();
+        // $(this).parent().addClass('active');
     }
 }
 

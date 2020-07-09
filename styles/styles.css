@@ -773,12 +773,6 @@ path {
   margin: 10px auto;
 }
 
-.overlay.active {
-  opacity: 1;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
 .url-container {
   display: -webkit-box;
   display: -ms-flexbox;
