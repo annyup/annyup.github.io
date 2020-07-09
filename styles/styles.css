@@ -763,7 +763,7 @@ path {
   border-radius: 10px;
 }
 
-.overlay:hover, .overlay:focus-within {
+.overlay:hover, .overlay:active, .overlay:focus-within {
   opacity: 1;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;

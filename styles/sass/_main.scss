@@ -252,7 +252,7 @@
     padding: 0 10px;
     border-radius: 10px;
   
-    &:hover, &:focus-within {
+    &:hover, &:active, &:focus-within {
         opacity: 1;
         transition: all 0.3s ease-in;
     }
