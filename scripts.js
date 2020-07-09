@@ -106,6 +106,19 @@ portfolio.hamburgerMenu = function() {
     }
 }
 
+portfolio.overlayHover = function() {
+
+    const overlay = document.getElementsByClassName('overlay');
+
+    overlay.addEventListener('touchstart', handleOverlay);
+
+    $('.overlay.active').removeClass('active');
+
+    function handleOverlay() {
+        $(this).parent().addClass('active');
+    }
+}
+
 portfolio.typingEffect = function() {
 
     const typed = new Typed('#typed', {
@@ -124,6 +137,7 @@ portfolio.init = function () {
     portfolio.hamburgerMenu();
     portfolio.typingEffect();
     portfolio.smoothScroll();
+    portfolio.overlayHover();
 };
 
 AOS.init({

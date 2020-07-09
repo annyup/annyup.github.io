@@ -262,6 +262,11 @@
     }
 }
 
+.overlay.active {
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
 .url-container {
     display: flex;
 }
