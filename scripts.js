@@ -63,11 +63,11 @@ portfolio.displayImage = function (portfolioArray) {
         const language = $(`<p>`)
             .text(image.language);
 
-        const liveUrl = $(`<a href="${image.live}" target="_blank" tabindex="1"></a>`)
+        const liveUrl = $(`<a href="${image.live}" target="_blank"></a>`)
             .addClass("url-button")
             .text("Live");
         
-        const gitUrl = $(`<a href="${image.github}" target="_blank" tabindex="1"></a>`)
+        const gitUrl = $(`<a href="${image.github}" target="_blank"></a>`)
             .addClass("url-button")
             .text("Github");
 
