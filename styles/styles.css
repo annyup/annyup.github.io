@@ -419,6 +419,7 @@ path {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 15%;
+  border: 1px red solid;
 }
 
 .intro img {
@@ -486,9 +487,7 @@ path {
 .mouse-arrow {
   color: #000;
   display: block;
-  position: absolute;
-  bottom: 7%;
-  padding-top: 30px;
+  margin-top: 10%;
 }
 
 .mouse-arrow a {
@@ -511,7 +510,6 @@ path {
   width: 2px;
   height: 5px;
   position: absolute;
-  top: 35px;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
