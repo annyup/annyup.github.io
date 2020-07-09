@@ -110,14 +110,10 @@ portfolio.hamburgerMenu = function() {
 portfolio.overlayHover = function() {
 
     const overlay = document.getElementById('overlay');
-
-    overlay.addEventListener('click', handleOverlay);
-
-    // $('.overlay.active').removeClass('active');
+    overlay.addEventListener('mouseenter', handleOverlay);
 
     function handleOverlay(event) {
         event.preventDefault();
-        // $(this).parent().addClass('active');
     }
 }
 
