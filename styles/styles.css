@@ -769,6 +769,10 @@ path {
   transition: all 0.3s ease-in;
 }
 
+.overlay p:first-child {
+  font-size: 2.0rem;
+}
+
 .overlay p {
   margin: 10px auto;
 }
@@ -832,6 +836,8 @@ path {
 
 .skills-list li {
   margin-top: 50px;
+  width: 130px;
+  text-align: center;
 }
 
 .skills-list i {
@@ -855,6 +861,16 @@ path {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.skills-list img {
+  width: 62px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  -webkit-filter: drop-shadow(3px 3px 0px #f0dcd1);
+          filter: drop-shadow(3px 3px 0px #f0dcd1);
 }
 
 /* Section four styles */

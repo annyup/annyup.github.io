@@ -256,6 +256,10 @@
         opacity: 1;
         transition: all 0.3s ease-in;
     }
+
+    p:first-child {
+        font-size: 2.0rem;
+    }
   
     p {
       margin: 10px auto;
@@ -301,6 +305,8 @@
 
     li {
         margin-top: 50px;
+        width: 130px;
+        text-align: center;
     }
 
     i {
@@ -316,6 +322,14 @@
         font-size: 1.8rem;
         display: flex;
         justify-content: center;
+    }
+
+    img {
+        width: 62px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        filter: drop-shadow(3px 3px 0px #f0dcd1);
     }
 }
 
