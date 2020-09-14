@@ -10,22 +10,29 @@ html {
 }
 
 body {
-    background-color: #f4f0ed;
-    font-family: 'Zilla Slab', serif;
+    background-color: #FBF0F1;
+    color: #172F55;
+    font-family: 'Source Sans Pro', Sans-Serif;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 /* Wrapper styles */
 
 .wrapper {
-    max-width: 1920px;
-    width: 70%;
+    max-width: 1080px;
+    width: 90%;
     margin: 0 auto;
 }
 
 h1, h2, h3 {
-    font-family: 'Lora', serif;
-    color: #000;
-    text-transform: lowercase;
+    font-family: 'Playfair Display', serif;
+    color: #172F55;
 }
 
 h1 {
@@ -33,18 +40,19 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 3.0rem;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 a {
-    font-size: 2.0rem;
-    color: #000;
+    font-size: 1.8rem;
+    color: #172F55;
     text-decoration: none;
     position: relative;
+    z-index: 1;
 }
 
 li {
@@ -52,22 +60,13 @@ li {
 }
 
 p {
-    font-size: 2.0rem;
-    font-family: 'Zilla Slab', serif;
+    font-size: 1.8rem;
+    font-family: 'Source Sans Pro', Sans-Serif;
 }
 
 button {
-    font-size: 2.0rem;
-    font-family: 'Zilla Slab', serif;
-}
-
-img {
-    display: block;
-}
-
-#about, #skills {
-    background-color: #c6887b;
-    margin-top: -4px;
+    font-size: 1.8rem;
+    font-family: 'Source Sans Pro', Sans-Serif;
 }
 
 .visuallyHidden:not(:focus):not(:active) {
@@ -80,20 +79,5 @@ img {
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0);
-    overflow: hidden;
-}
-
-svg {
-    height: 100%;
-    width: 100%;
-}
-
-path {
-    stroke: none;
-    fill: #c6887b;
-}
-
-.svg-wave {
-    height: 250px;
     overflow: hidden;
 }

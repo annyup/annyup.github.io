@@ -1,104 +1,141 @@
 const portfolio = {};
 
-portfolio.portfolioArray = [
-    {
-        title: 'Shopper Mapper',
-        url: "assets/portfolio-preview-five.png",
-        alt: "Shopper Mapper",
-        live: "https://shopper-mapper.github.io/shopper-mapper/",
-        github: "https://github.com/shopper-mapper/shopper-mapper",
-        description: "Sometimes you don't want to go to the coolest, newest place. Shopper Mapper is the app for you! Made by Anny Pham, Yuliana Hazda, Allan Limitless, and Edward Bacal.",
-        language: "HTML | CSS | ReactJS | API | Mob Programming",
-        aos: 'fade-right',
-    },
-    {
-        title: 'Pic-draw-sso',
-        url: "assets/portfolio-preview-four.png",
-        alt: "Pic-draw-sso",
-        live: "https://annyup.github.io/pic-draw-sso/",
-        github: "https://github.com/annyup/pic-draw-sso",
-        description: "Are you the next Picasso? Pic-draw-sso is a fun and interactive drawing app for you to doodle and upload to a gallery to share with the world!",
-        language: "HTML | CSS | ReactJS | Firebase",
-        aos: 'fade-left',
-    },
-    {
-        title: 'Emoji Image Gallery',
-        url: "assets/portfolio-preview-three.png",
-        alt: "Emoji Image Gallery",
-        live: "https://anny-hector.github.io/emoji-image-gallery/",
-        github: "https://github.com/anny-hector/emoji-image-gallery",
-        description: "Are you feeling happy? Festive? Want to see nature? Click on an emoji! Each emoji will load images accordingly. This was made by Anny Pham and Hector Gonzalez.",
-        language: "HTML | CSS | SCSS | JavaScript | jQuery | API | Pair Programming",
-        aos: 'fade-right',
-    },
-    {
-        title: "I purple you",
-        url: "assets/portfolio-preview-two.png",
-        alt: "I purple you",
-        live: "https://annyup.github.io/annyPhamProjectThree/",
-        github: "https://github.com/annyup/annyPhamProjectThree",
-        description: "I purple you is a timeline and soundboard dedicated to the Kpop group BTS. Interact with the buttons and listen to a short clip of their music!",
-        language: "HTML | CSS | SCSS | JavaScript | jQuery",
-        aos: 'fade-left',
-    },
-    {
-        title: `Mindn'Soul`,
-        url: "assets/portfolio-preview-one.png",
-        alt: "Mindn'Soul",
-        live: "https://annyup.github.io/anny-pham-project-two/",
-        github: "https://github.com/annyup/anny-pham-project-two",
-        description: "Mindn'Soul is a multi page PSD Conversion for a company specializing in health.",
-        language: "HTML | CSS | SCSS | PSD Conversion",
-        aos: 'fade-right',
-    },
-]
+portfolio.particles = function() {
+    
+    var NUM_PARTICLES = ( ( ROWS = 15 ) * ( COLS = 100 ) ),
+        THICKNESS = Math.pow( 80, 2 ),
+        SPACING = 18,
+        MARGIN = 100,
+        COLOR = 220,
+        DRAG = 0.95,
+        EASE = 0.25,
 
-portfolio.displayImage = function (portfolioArray) {
-    portfolioArray.forEach(function (image) {
+        container,
+        particle,
+        canvas,
+        mouse,
+        stats,
+        list,
+        ctx,
+        tog,
+        man,
+        dx, dy,
+        mx, my,
+        d, t, f,
+        a, b,
+        i, n,
+        w, h,
+        p, s,
+        r, c;
 
+    particle = {
+        vx: 0,
+        vy: 0,
+        x: 0,
+        y: 0
+    };
+
+    function startParticles() {
+        container = document.getElementById('container');
+        canvas = document.createElement('canvas');
+
+        ctx = canvas.getContext('2d');
+        man = false;
+        tog = true;
+
+        list = [];
+
+        w = canvas.width = COLS * SPACING + MARGIN * 2;
+        h = canvas.height = ROWS * SPACING + MARGIN * 2;
+
+        container.style.marginLeft = Math.round( w * -0.5 ) + 'px';
+        container.style.marginTop = Math.round( h * -0.5 ) + 'px';
+
+        for ( i = 0; i < NUM_PARTICLES; i++ ) {
+            p = Object.create( particle );
+            p.x = p.ox = MARGIN + SPACING * ( i % COLS );
+            p.y = p.oy = MARGIN + SPACING * Math.floor( i / COLS );
+
+            list[i] = p;
+        }
+
+        container.addEventListener( 'mousemove', function(e) {
+            bounds = container.getBoundingClientRect();
+            mx = e.clientX - bounds.left;
+            my = e.clientY - bounds.top;
+            man = true;
+
+        });
+
+        if ( typeof Stats === 'function' ) {
+            document.body.appendChild( ( stats = new Stats() ).domElement );
+        }
+
+        container.appendChild( canvas );
+    }
+
+    function step() {
+        if ( stats ) stats.begin();
+
+        if ( tog = !tog ) {
+
+            if ( !man ) {
+                t = +new Date() * 0.001;
+                mx = w * 0.5 + ( Math.cos( t * 2.1 ) * Math.cos( t * 0.9 ) * w * 0.45 );
+                my = h * 0.5 + ( Math.sin( t * 3.2 ) * Math.tan( Math.sin( t * 0.8 ) ) * h * 0.45 );
+        }
         
-        const photo = $("<img>")
-        .addClass("portfolio-img")
-        .attr("src", image.url)
-        .attr("alt", image.alt);
+        for ( i = 0; i < NUM_PARTICLES; i++ ) {
+            p = list[i];
+            
+            d = ( dx = mx - p.x ) * dx + ( dy = my - p.y ) * dy;
+            f = -THICKNESS / d;
 
-        const title =$(`<p>`)
-            .text(image.title);
+            if ( d < THICKNESS ) {
+                t = Math.atan2( dy, dx );
+                p.vx += f * Math.cos(t);
+                p.vy += f * Math.sin(t);
+            }
 
-        const description = $(`<p>`)
-            .text(image.description);
-        
-        const language = $(`<p>`)
-            .text(image.language);
+            p.x += ( p.vx *= DRAG ) + (p.ox - p.x) * EASE;
+            p.y += ( p.vy *= DRAG ) + (p.oy - p.y) * EASE;
 
-        const liveUrl = $(`<a href="${image.live}" target="_blank"></a>`)
-            .addClass("url-button")
-            .text("Live");
-        
-        const gitUrl = $(`<a href="${image.github}" target="_blank"></a>`)
-            .addClass("url-button")
-            .text("Github");
+        }
 
-        const urlButton = $(`<div>`)
-            .addClass("url-container")
-            .append(liveUrl, gitUrl);
+    } else {
+        b = ( a = ctx.createImageData( w, h ) ).data;
 
-        
-      // overlay on top of image displaying info & download
-      const overlay = $(`<div>`)
-          .addClass("overlay")
-          .attr("id", "overlay")
-          .append(title, description, language, urlButton);
-      
-      const portfolioImg = $(`<div>`)
-        .addClass("piece")
-        .attr("data-aos", image.aos)
-        .append(photo, overlay);
-  
-      $(".portfolio-grid").append(portfolioImg);
-      console.log('hello');
+        for ( i = 0; i < NUM_PARTICLES; i++ ) {
+            p = list[i];
+            // b[n = ( ~~p.x + ( ~~p.y * w ) ) * 4] = 23,
+            // b[n+1] = 47,
+            // b[n+2] = 85,
+            // b[n+3] = 255;
+            b[n = ( ~~p.x + ( ~~p.y * w ) ) * 4] = 251,
+            b[n+1] = 240,
+            b[n+2] = 241,
+            b[n+3] = 255;
+        }
+
+        ctx.putImageData( a, 0, 0 );
+    }
+
+    if ( stats ) stats.end();
+
+    requestAnimationFrame( step );
+
+    }
+
+    startParticles();
+    step();
+}
+
+portfolio.navColour = function() {
+    $(document).scroll(function () {
+        let $nav = $(".nav-container");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
-};
+}
 
 portfolio.hamburgerMenu = function() {
 
@@ -115,39 +152,14 @@ portfolio.hamburgerMenu = function() {
     }
 }
 
-portfolio.overlayHover = function() {
-
-    const overlay = document.getElementById('overlay');
-    overlay.addEventListener('click', handleOverlay);
-
-    function handleOverlay(event) {
-        event.preventDefault();
-    }
-}
-
-portfolio.typingEffect = function() {
-
-    const typed = new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        typeSpeed: 100,
-        backSpeed: 80,
-        smartBackspace: true,
-        loop: true,
-        backDelay: 2000,
-        startDelay: 200
-    });
-}
-
-portfolio.init = function () {
-    portfolio.displayImage(portfolio.portfolioArray);
+portfolio.init = function() {
+    portfolio.particles();
+    portfolio.navColour();
     portfolio.hamburgerMenu();
-    portfolio.typingEffect();
-    portfolio.smoothScroll();
-    portfolio.overlayHover();
 };
 
 AOS.init({
-    duration: 1000
+    duration: 2000
 });
 
 $(function () {

@@ -1,21 +1,40 @@
-.nav-container {
+nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    width: 100%;
+}
+
+.nav-container {
+    padding: 10px 10%;
+    background-color: #172F55;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.nav-container.scrolled {
+    background-color: #172F55 !important;
+    transition: background-color 200ms linear;
 }
 
 .nav-styles {
     display: flex;
+    justify-content: center;
     text-transform: lowercase;
 
     li {
         margin-right: 80px;
     }
 
+    li:last-child {
+        margin-right: 0;
+    }
+
     a {
-        color: #000;
+        // color: #172F55;
+        color: #FBF0F1;
 
         &::after {
             content: "";
@@ -28,7 +47,7 @@
           }
         
           &:hover::after {
-            background: rgba(198, 136, 123, 0.5);
+            background: rgba(236, 203, 201, 0.5);
             transition: all 0.3s ease-in;
         }
     }
@@ -42,4 +61,12 @@
     #toggle {
         display: none;
     }
+}
+
+.nav-logo {
+    font-size: 3.0rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-transform: lowercase;
+    color: #FBF0F1;
 }
