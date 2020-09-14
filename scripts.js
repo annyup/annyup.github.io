@@ -156,11 +156,10 @@ portfolio.init = function() {
     portfolio.particles();
     portfolio.navColour();
     portfolio.hamburgerMenu();
+    AOS.init({
+        duration: 2000
+    });
 };
-
-AOS.init({
-    duration: 2000
-});
 
 $(function () {
     portfolio.init();
