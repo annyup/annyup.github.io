@@ -152,13 +152,14 @@ portfolio.hamburgerMenu = function() {
     }
 }
 
+AOS.init({
+    duration: 2000
+});
+
 portfolio.init = function() {
     portfolio.particles();
     portfolio.navColour();
     portfolio.hamburgerMenu();
-    AOS.init({
-        duration: 2000
-    });
 };
 
 $(function () {
