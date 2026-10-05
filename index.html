@@ -1,282 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="Anny Pham - Front-end developer">
-    <meta name="keywords" content="Anny Pham, front-end developer, web developer, graphic designer, portfolio">
+    <meta name="keywords" content="Anny Pham, web designer, ux designer, ui designer, front-end developer, web developer, graphic designer, portfolio">
     <meta name="author" content="Anny Pham">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7b2a7aecf5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./styles/styles.css">
     <title>Anny U Pham | Web Designer</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <!-- Start of header -->
-    <header id="home">
-        <div class="nav-container" id="nav-sticky">
-            <!-- Start of nav -->
-            <nav>
-                <p class="nav-logo">AUP</p>
-                <div class="nav-toggle">
-                    <input type="checkbox" id="toggle" tabindex="1"/>
-                        <span aria-label="navigation bar"><i class="fas fa-bars"></i></span>
-                            <ul id="nav-styles" class="nav-styles">
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="#projects">Projects</a>
-                                </li>
-                                <li>
-                                    <a href="#contact">Contact</a>
-                                </li>
-                            </ul>
-            </nav>
-            <!-- End of nav -->
-        </div>
-
-        <div class="wrapper">
-            <div class="intro">
-                <div class="logo">
-                    <h2 class="rotate">Anny P</h2>
-                    <h2 data-aos="fade-down">Designer</h2>
-                </div>
-                <div id="container"></div>
-                <div class="mouse-arrow">
-                    <a class="mouse-box" href="#about">
-                        <span aria-label="scroll down"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="svg-divide">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-                <path d="M-7.62,-3.46 C193.28,196.21 295.71,196.21 507.05,-1.48 L500.00,149.50 L0.00,149.50 Z"></path>
-            </svg>
-        </div>
+    <header>
+        <nav aria-label="Main">
+            <a class="logo" href="#top">AUP</a>
+            <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu"
+                aria-label="Open menu"><span></span><span></span><span></span></button>
+            <ul id="menu">
+                <li style="--i:0"><a href="#projects">Projects</a></li>
+                <li style="--i:1"><a href="/about.html">About</a></li>
+                <li style="--i:2"><a href="https://drive.google.com/file/d/138iYlJGk69N2KkP4-niwlsMc2JGMLqX7/view?usp=sharing">CV</a></li>
+            </ul>
+        </nav>
+        <div class="overlay" id="overlay"></div>
     </header>
-    <!-- End of header -->
-
-    <!-- Start of main -->
-    <main>
-        <!-- Start of about -->
-        <section id="about">
-            <div class="wrapper about" data-aos="fade-up">
-                <h2>Turning my passion to full time</h2>
-                    <a href="about.html">learn behind the design</a>
-            </div>
-        </section>
-        <!-- End of about -->
-
-        <!-- Start of projects -->
-        <section id="projects" class="projects">
-            <div class="wrapper">
-                <h2>Projects</h2>
-                    <ul>
-                    <!-- Projects load here -->
-                        <li class="projects-container purple-you" data-aos="fade-left">
-                            <div class="right-dots" data-aos="fade-down">
-                                <img src="./assets/background-dots-1.png" alt="">
-                            </div>
-                            <div class="img-container">
-                                <img class="portfolio-preview" src="assets/portfolio-preview-two.png">
-                            </div>
-                            <div class="text-container">
-                                <h3>I purple you</h3>
-                                <p>A timeline and soundboard dedicated to the Kpop group BTS. Interact with the buttons and listen to a short clip of their music!</p>
-                                <p>HTML | CSS | SCSS | JavaScript | jQuery</p>
-                                <div class="url-button">
-                                    <a href="https://annyup.github.io/annyPhamProjectThree/" target="_blank">Live</a>
-                                    <a href="https://github.com/annyup/annyPhamProjectThree" target="_blank">Github</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="projects-container emoji-gallery" data-aos="fade-right">
-                            <div class="left-dots" data-aos="fade-up">
-                                <img src="./assets/background-lines.png" alt="">
-                            </div>
-                            <div class="img-container">
-                                <img src="assets/portfolio-preview-three.png">
-                            </div>
-                            <div class="text-container">
-                                <h3>Emoji Image Gallery</h3>
-                                <p>Are you feeling happy? Festive? Want to see nature? Click on an emoji! Each emoji will load images accordingly. This was made by Anny Pham and Hector Gonzalez.</p>
-                                <p>HTML | SCSS | JavaScript | jQuery | API | Pair Programming</p>
-                                <div class="url-button">
-                                    <a href="https://anny-hector.github.io/emoji-image-gallery/" target="_blank">Live</a>
-                                    <a href="https://github.com/anny-hector/emoji-image-gallery" target="_blank">Github</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="projects-container picdrawsso" data-aos="fade-left">
-                            <div class="right-dots" data-aos="fade-down">
-                                <img src="./assets/background-dots-1.png" alt="">
-                            </div>
-                            <div class="img-container">
-                                <img src="assets/portfolio-preview-four.png">
-                            </div>
-                            <div class="text-container">
-                                <h3>Pic-draw-sso</h3>
-                                <p>Are you the next Picasso? Pic-draw-sso is a fun and interactive drawing app for you to doodle and upload to a gallery to share with the world!</p>
-                                <p>HTML | CSS | ReactJS | Firebase</p>
-                                <div class="url-button">
-                                    <a href="https://annyup.github.io/pic-draw-sso/#/" target="_blank">Live</a>
-                                    <a href="https://github.com/annyup/pic-draw-sso" target="_blank">Github</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="projects-container shopper-mapper" data-aos="fade-right">
-                            <div class="left-dots" data-aos="fade-up">
-                                <img src="./assets/background-lines.png" alt="">
-                            </div>
-                            <div class="img-container">
-                                <img src="assets/portfolio-preview-five.png">
-                            </div>
-                            <div class="text-container">
-                                <h3>Shopper Mapper</h3>
-                                <p>Sometimes you don't want to go to the coolest, newest place. Shopper Mapper is the app for you! Made by Anny Pham, Yuliana Hazda, Allan Limitless, and Edward Bacal.</p>
-                                <p>HTML | CSS | ReactJS | API | Mob Programming</p>
-                                <div class="url-button">
-                                    <a href="https://shopper-mapper.github.io/shopper-mapper/" target="_blank">Live</a>
-                                    <a href="https://github.com/shopper-mapper/shopper-mapper" target="_blank">Github</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="projects-container shopper-mapper" data-aos="fade-left">
-                            <div class="right-dots" data-aos="fade-down">
-                                <img src="./assets/background-dots-1.png" alt="">
-                            </div>
-                            <div class="img-container">
-                                <img src="assets/portfolio-preview-six.png">
-                            </div>
-                            <div class="text-container">
-                                <h3>Past Design Work</h3>
-                                <p>A selection of visual and digital design work created during my time at the University of Windsor, including website layouts, digital content, social media graphics, marketing materials, and print collateral. These projects highlight my experience creating clear, consistent, and engaging visual communications for a variety of audiences.</p>
-                                <p>HTML | CSS | Photoshop | Illustrator | Print</p>
-                                <div class="url-button">
-                                    <a href="https://drive.google.com/file/d/1UjzAMCWwpcydMyPLcBpkYW9_21-sNadR/view?usp=sharing" target="_blank">View</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>        
-            </div>
-        </section>
-        <!-- End of projects -->
-
-        <!-- Start of skills -->
-        <section id="skills">
-            <div class="wrapper">
-                <div class="skills" data-aos="fade-up">
-                    <h2>Skills + Toolkit</h2>
-                        <ul class="skills-list">
-                            <li>
-                                <i class="fab fa-html5"></i>
-                                <span>HTML5</span>
-                            </li>
-                            <li>
-                                <i class="fab fa-css3-alt"></i>
-                                <span>CSS3</span>
-                            </li>
-                            <li>
-                                <i class="fab fa-sass"></i>
-                                <span>
-                                    Sass
-                                </span>
-                            </li>
-                            <li>
-                                <i class="fab fa-js"></i>
-                                <span>JavaScript</span>
-                            </li>
-                            <li>
-                                <i class="devicon-jquery-plain"></i>
-                                <span>jQuery</span>
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-figma"></i>
-                                <span>Figma</span>
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-bootstrap"></i>
-                                <span>Bootstrap</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-universal-access"></i>
-                                <span>Accessibility</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-mobile-alt"></i>
-                                <span>Responsive Design</span>
-                            </li>
-                            <li>
-                                <i class="devicon-photoshop-plain"></i>
-                                <span>Photoshop</span>
-                            </li>
-                        </ul>
+    <div class="herowrap" id="top">
+        <div id="grid"></div>
+        <div class="wrap">
+            <div class="hero">
+                <div>
+                    <h1>Hi, I’m <span>Anny!</span></h1>
+                    <p>I’m a Web Designer at Jonas Software, with a background in web design and marketing across
+                        software, small businesses, and higher education.</p>
+                    <a class="btn" href="#projects">See my work</a>
                 </div>
+                <div class="photo">Your photo here</div>
             </div>
-        </section>
-        <!-- End of skills -->
+        </div>
+    </div>
+    <main class="wrap">
 
-        <!-- Start of contact -->
-        <section id="contact">
-            <div class="wrapper">
-                <div class="contact" data-aos="fade-up">
-                    <h2>Let's connect!</h2>
-                        <p>annyupham[at]gmail[dot]com</p>
-                        <ul class="social-info">
-                            <li><a href="https://linkedin.com/in/annyupham" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="https://github.com/annyup" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
-                        </ul>
-                        <form action="http://www.focuspocus.io/magic/annyupham@gmail.com" method="POST" id="form" name="form">
-                            <div class="form">
-                                <fieldset>
-                                    <label class="visuallyHidden" for="name">Name</label>
-                                    <input type="text" id="yourName" name="name" placeholder="Name*">
-                                </fieldset>
-                                <fieldset>
-                                    <label class="visuallyHidden" for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Email*">
-                                </fieldset>
-                                <fieldset>
-                                    <label class="visuallyHidden" for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number">
-                                </fieldset>
-                                <label class="visuallyHidden" for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Message*"></textarea>
-                            </div>
-                            <div class="form-button">
-                                <button type="submit" class="button-block">Send Message</button>
-                            </div>
-                        </form>
+        <section id="projects">
+            <h2>Projects</h2>
+            <article class="proj feature">
+                <div class="thumb">Dribbble</div>
+                <div>
+                    <h3>Design Portfolio on Dribbble</h3>
+                    <p>Visual design work, UI explorations and shots. Come see my latest designs.</p>
+                    <div class="tags"><span>UI Design</span><span>Visual Design</span><span>Branding</span></div>
+                    <div class="links"><a href="https://dribbble.com/annyupham">View on Dribbble ↗</a></div>
                 </div>
-            </div>
-        </section>
-        <!-- End of contact -->
+            </article>
 
+            <article class="proj">
+                <div class="thumb"><img src="assets/portfolio-preview-two.png"></div>
+                <div>
+                    <h3>I purple you</h3>
+                    <p>A timeline and soundboard dedicated to the Kpop group BTS. Interact with the buttons and listen
+                        to a short clip of their music!</p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>SCSS</span><span>JavaScript</span><span>jQuery</span>
+                    </div>
+                    <div class="links"><a href="https://annyup.github.io/annyPhamProjectThree/">Live</a><a
+                            href="https://github.com/annyup/annyPhamProjectThree">Github</a></div>
+                </div>
+            </article>
+
+            <article class="proj">
+                <div class="thumb"><img src="assets/portfolio-preview-four.png"></div>
+                <div>
+                    <h3>Pic-draw-sso</h3>
+                    <p>Are you the next Picasso? Pic-draw-sso is a fun and interactive drawing app for you to doodle and
+                        upload to a gallery to share with the world!</p>
+                    <div class="tags"><span>HTML</span><span>CSS</span><span>ReactJS</span><span>Firebase</span></div>
+                    <div class="links"><a href="https://annyup.github.io/pic-draw-sso/#/">Live</a><a
+                            href="https://github.com/annyup/pic-draw-sso">Github</a></div>
+                </div>
+            </article>
+
+            <article class="proj">
+                <div class="thumb"><img src="assets/portfolio-preview-five.png"></div>
+                <div>
+                    <h3>Shopper Mapper</h3>
+                    <p>Sometimes you don't want to go to the coolest, newest place. Shopper Mapper is the app for you!
+                        Made by Anny Pham, Yuliana Hazda, Allan Limitless, and Edward Bacal.</p>
+                    <div class="tags"><span>HTML</span><span>CSS</span><span>ReactJS</span><span>API</span><span>Mob
+                            Programming</span></div>
+                    <div class="links"><a href="https://shopper-mapper.github.io/shopper-mapper/">Live</a><a
+                            href="https://github.com/shopper-mapper/shopper-mapper">Github</a></div>
+                </div>
+            </article>
+
+            <article class="proj">
+                <div class="thumb"><img src="assets/portfolio-preview-six.png"></div>
+                <div>
+                    <h3>Past Design Work</h3>
+                    <p>A selection of visual and digital design work created during my time at the University of
+                        Windsor, including website layouts, digital content, social media graphics, marketing materials,
+                        and print collateral.</p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>Photoshop</span><span>Illustrator</span><span>Print</span>
+                    </div>
+                    <div class="links"><a
+                            href="https://drive.google.com/file/d/1UjzAMCWwpcydMyPLcBpkYW9_21-sNadR/view?usp=sharing">View</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="toolkit">
+            <h2>Skills + Toolkit</h2>
+            <div class="kit">
+                <span>HTML5</span><span>CSS3</span><span>Sass</span><span>JavaScript</span><span>jQuery</span><span>Figma</span><span>Bootstrap</span><span>Accessibility</span><span>Responsive
+                    Design</span><span>Photoshop</span></div>
+        </section>
     </main>
-    <!-- End of main -->
-
-    <!-- Start of footer -->
     <footer>
-        <p>Copyright © Anny Pham 2026</p>
+        <div class="wrap foot">
+            <span>© 2026 Anny Pham. All rights reserved.</span>
+            <div><a href="mailto:annyupham@gmail.com">Email</a><a href="https://dribbble.com/annyupham">Dribbble</a><a
+                    href="https://linkedin.com/in/annyupham">LinkedIn</a></div>
+        </div>
     </footer>
-    <!-- End of footer -->
 
-    <!-- Start of scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
     <script src="scripts.js"></script>
-    <!-- End of scripts -->
+
 
 </body>
+
 </html>
