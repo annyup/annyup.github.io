@@ -334,7 +334,7 @@ h2 {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 56px;
-  align-items: start;
+  align-items: center;
   padding: 72px 0 40px;
 }
 
