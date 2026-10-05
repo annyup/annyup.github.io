@@ -140,13 +140,16 @@ nav ul a[aria-current] {
 .hero {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 48px;
+  display: flex;
+  /* grid-template-columns: 1.2fr 1fr; */
+  /* gap: 48px; */
   align-items: center;
   padding: 90px 0 100px;
   pointer-events: none;
+  justify-content: center;
+  text-align: center;
 }
+
 
 .herowrap .wrap {
   position: relative;
@@ -206,6 +209,7 @@ nav ul a[aria-current] {
   border-radius: 32px;
   font-weight: 700;
   text-align: center;
+  display: none;
 }
 
 /* =========================
@@ -262,6 +266,11 @@ h2 {
   font-size: 1.1rem;
   font-weight: 800;
   text-align: center;
+}
+
+.thumb img {
+  width: 100%;
+  border-radius: 18px;
 }
 
 .proj h3 {
